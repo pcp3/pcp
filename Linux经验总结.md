@@ -1,6 +1,6 @@
  
 
-<center><font size="36px" color="black"><b>Linux常用操作</b></font></center>
+<font size=32>Linux常用操作</font>
 
 
 # 1 硬盘分区及格式化
