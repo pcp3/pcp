@@ -1,6 +1,6 @@
  
 
-<font size=32>Linux常用操作</font>
+<center>**Linux常用操作**</center>
 
 
 # 1 硬盘分区及格式化
@@ -15,19 +15,11 @@
   fdisk –l
   ```
 
-  
-
-![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
-
 - 查看已有分区
 
   ```
   df –l
   ```
-
-![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
-
-[图片说明]: 目前还没有*/dev/sdb*分区
 
 - 添加分区
 
@@ -35,11 +27,8 @@
   fdisk /dev/sdb
   ```
 
-![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
 
-按照以下红框输入
-
-1. ```
+  ```
    1. 回车
    2. P 回车
    3. 1 回车
@@ -47,17 +36,11 @@
    5. W 回车
    ```
 
- ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
-
 - 查看分区
 
   ```
   fdisk –l
   ```
-
-![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.png)
-
-[图片说明]: 已多出了一个分区，但是没有格式化
 
 ## 1.2   分区格式化
 
@@ -69,7 +52,6 @@
 
   [^参数说明]: t 指定要把磁盘格式化成什么类型；-c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要。
 
- ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png)
 
 ## 1.3   挂载到目录
 
@@ -85,23 +67,19 @@
   mount /dev/sdb /opt
   ```
 
-　　![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png)
-
 - 开机自动挂载
 
   ```
   echo "/dev/sdb /opt ext4 defaults 0 0">>/etc/fstaba
   ```
 
-　　![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.png)
-
 # 2 systemctl命令介绍
 
-systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。
+  systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。
 
 ## 2.1 启停命令
 
-以firewalld.service为例
+  以firewalld.service为例
 
 - 启动服务
 
@@ -174,10 +152,10 @@ systemctl是CentOS7的服务管理工具中主要的工具，它融合之前serv
 ## 3.2 配置163的源
 
 ```
-	vi /etc/yum.repos.d/CentOS-Base.repo
+	vi /etc/yum.repos.d/CentOS7-Base-163.repo
 ```
 
-[下载地址]: http://mirrors.163.com/.help/CentOS7-Base-163.repo
+[CentOS7-Base-163.repo下载地址](http://mirrors.163.com/.help/CentOS7-Base-163.repo)
 
 ## 3.3 设置Yum缓存
 
@@ -189,7 +167,7 @@ vi /etc/yum.conf
 
 <!--开启缓存后，用yum install安装的软件包会在/var/cache/yum中保存-->
 
-[参考]: http://jingyan.baidu.com/album/d2b1d102b8b0825c7f37d46b.html?picindex=11
+[参考网址](http://jingyan.baidu.com/album/d2b1d102b8b0825c7f37d46b.html?picindex=11)
 
 
 
@@ -278,7 +256,7 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 
 - 从官网下载最新稳定版python安装包（略过）
 
-  [官网地址]: https://www.python.org/downloads/
+  [python官网下载地址](https://www.python.org/downloads/)
 
 - 解压，进入目录
 
