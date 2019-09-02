@@ -303,14 +303,12 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 ```
 vi /usr/bin/yum
 ```
-
 > 第一行改为：/usr/bin/python2.7
 
 
 ```
  vi /usr/libexec/urlgrabber-ext-down
 ```
-
 > 第一行改为：/usr/bin/python2.7
 
 
