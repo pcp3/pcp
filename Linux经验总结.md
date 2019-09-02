@@ -5,7 +5,7 @@
 
 # 1 硬盘分区及格式化
 
-说明：扩容需求，新添加了一块硬盘sdb。需将sdb分成一个区，然后格式化。
+​	说明：扩容需求，新添加了一块硬盘sdb。需将sdb分成一个区，然后格式化。
 
 ## 1.1 硬盘分区
 
@@ -50,7 +50,7 @@
   mkfs -t ext4 -c /dev/sdb
   ```
 
-  参数说明：-t 指定要把磁盘格式化成什么类型；-c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要。
+  > 参数说明：-t 指定要把磁盘格式化成什么类型；-c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要。
 
 
 ## 1.3   挂载到目录
@@ -75,11 +75,11 @@
 
 # 2 systemctl命令介绍
 
-  systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。
+  	systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。
 
 ## 2.1 启停命令
 
-  以firewalld.service为例
+  	以firewalld.service为例
 
 - 启动服务
 
@@ -147,7 +147,7 @@
 	vi /etc/resolv.conf 
 ```
 
-> nameserver 114.114.114.114
+> ​	nameserver 114.114.114.114
 
 ## 3.2 配置163的源
 
@@ -163,7 +163,8 @@
 vi /etc/yum.conf
 ```
 
- 修改：keepcache=1
+>  修改：keepcache=1
+>
 
 > 开启缓存后，用yum install安装的软件包会在/var/cache/yum中保存
 >
@@ -174,7 +175,7 @@ vi /etc/yum.conf
 
 # 4 免密钥登录
 
-只有两步，特别简单
+​	只有两步，特别简单
 
 - 生成公钥与私钥对，一路回车执行
 
@@ -190,7 +191,7 @@ vi /etc/yum.conf
 
 # 5 后台进程监控工具
 
-progress-master是一款监控后台进程的工具。非常有助于实时监控后台执行的大文件的拷贝速度、大文件下载速度。
+​	progress-master是一款监控后台进程的工具。非常有助于实时监控后台执行的大文件的拷贝速度、大文件下载速度。
 
 ## 5.1 安装工具
 
@@ -235,11 +236,9 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 
 [官网网址]: (https://github.com/Xfennec/progress
 
-
-
 # 6 根据内容查找文件
 
-- 根据内容查找文件：
+- 根据内容查找文件
 
   ```
   find /opt/kubespray/kubespray/ | xargs grep -ri 'centos'
