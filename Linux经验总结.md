@@ -1,6 +1,6 @@
  
 
-**Linux常用操作**
+<font size="40"><b>Linux常用操作</b></font>
 
 
 # 1 硬盘分区及格式化
@@ -50,7 +50,7 @@
   mkfs -t ext4 -c /dev/sdb
   ```
 
-  [^参数说明]: t 指定要把磁盘格式化成什么类型；-c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要。
+  参数说明：-t 指定要把磁盘格式化成什么类型；-c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要。
 
 
 ## 1.3   挂载到目录
@@ -147,7 +147,7 @@
 	vi /etc/resolv.conf 
 ```
 
-[^增加]: nameserver 114.114.114.114
+> nameserver 114.114.114.114
 
 ## 3.2 配置163的源
 
@@ -165,7 +165,8 @@ vi /etc/yum.conf
 
  修改：keepcache=1
 
-<!--开启缓存后，用yum install安装的软件包会在/var/cache/yum中保存-->
+> 开启缓存后，用yum install安装的软件包会在/var/cache/yum中保存
+>
 
 [参考网址](http://jingyan.baidu.com/album/d2b1d102b8b0825c7f37d46b.html?picindex=11)
 
