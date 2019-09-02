@@ -34,7 +34,7 @@
    3. 1 回车
    4. 两次回车
    5. W 回车
-   ```
+  ```
 
 - 查看分区
 
@@ -163,7 +163,7 @@
 vi /etc/yum.conf
 ```
 
-[^修改]: keepcache=1
+ 修改：keepcache=1
 
 <!--开启缓存后，用yum install安装的软件包会在/var/cache/yum中保存-->
 
@@ -232,7 +232,7 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
   watch progress -c httpd
   ```
 
-[官网地址]: https://github.com/Xfennec/progress
+[官网网址]: (https://github.com/Xfennec/progress
 
 
 
@@ -256,7 +256,7 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 
 - 从官网下载最新稳定版python安装包（略过）
 
-  [python官网下载地址](https://www.python.org/downloads/)
+  [<u>python官网下载地址</u>](https://www.python.org/downloads/)
 
 - 解压，进入目录
 
@@ -304,13 +304,13 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 vi /usr/bin/yum
 ```
 
-[^修改第一行]: /usr/bin/python2.7
+> 第一行改为：/usr/bin/python2.7
 
 ```
  vi /usr/libexec/urlgrabber-ext-down
 ```
 
-[^修改第一行]: /usr/bin/python2.7
+> 第一行改为：/usr/bin/python2.7
 
 ## 7.4 测试
 
@@ -318,10 +318,11 @@ vi /usr/bin/yum
 python 
 ```
 
-[^返回结果示例]: Python 3.6.2 (default, Mar  9 2018, 20:59:55)
-
-​       [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)] on linux
-
-​       Type "help", "copyright", "credits" or "license" for more information.
-
-​       \>>>
+> Python 3.6.2 (default, Mar  9 2018, 20:59:55)
+>
+> ​       [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)] on linux
+>
+> ​       Type "help", "copyright", "credits" or "license" for more information.
+>
+> ​       \>>>
+>
