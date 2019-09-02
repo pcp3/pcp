@@ -3,7 +3,6 @@
 <center><font size="36px" color="black"><b>Linux常用操作</b></font></center>
 
 
-
 # 1 硬盘分区及格式化
 
 说明：扩容需求，新添加了一块硬盘sdb。需将sdb分成一个区，然后格式化。
@@ -28,7 +27,7 @@
 
 ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
 
-[^]: 上图中显示：目前还没有*/dev/sdb*分区
+[图片说明]: 目前还没有*/dev/sdb*分区
 
 - 添加分区
 
@@ -38,17 +37,15 @@
 
 ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
 
-`<!--`按照以下红框输入`-->`
+按照以下红框输入
 
-`<!--`N 回车`-->`
-
-`<!--`P 回车`-->`
-
-`<!--`1 回车`-->`
-
-`<!--`两次回车`-->`
-
-`<!--`W 回车-->``
+1. ```
+   1. 回车
+   2. P 回车
+   3. 1 回车
+   4. 两次回车
+   5. W 回车
+   ```
 
  ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
 
@@ -60,7 +57,7 @@
 
 ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.png)
 
-[^]: 上图中显示：已多出了一个分区，但是没有格式化
+[图片说明]: 已多出了一个分区，但是没有格式化
 
 ## 1.2   分区格式化
 
@@ -70,8 +67,7 @@
   mkfs -t ext4 -c /dev/sdb
   ```
 
-  <<!--!---t 指定要把磁盘格式化成什么类型-->
-   -c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要-->
+  [^参数说明]: t 指定要把磁盘格式化成什么类型；-c 在建立文件系统之前检查坏道，可能会很费时间，新硬盘一般不需要。
 
  ![img](file:////Users/zhanglch/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png)
 
@@ -173,9 +169,7 @@ systemctl是CentOS7的服务管理工具中主要的工具，它融合之前serv
 	vi /etc/resolv.conf 
 ```
 
-<!--增加-->  
-
-> nameserver 114.114.114.114
+[^增加]: nameserver 114.114.114.114
 
 ## 3.2 配置163的源
 
@@ -183,9 +177,7 @@ systemctl是CentOS7的服务管理工具中主要的工具，它融合之前serv
 	vi /etc/yum.repos.d/CentOS-Base.repo
 ```
 
-<!--配置内容下载地址：-->
-
-[]: http://mirrors.163.com/.help/CentOS7-Base-163.repo
+[下载地址]: http://mirrors.163.com/.help/CentOS7-Base-163.repo
 
 ## 3.3 设置Yum缓存
 
@@ -193,13 +185,13 @@ systemctl是CentOS7的服务管理工具中主要的工具，它融合之前serv
 vi /etc/yum.conf
 ```
 
-<!--修改--> 
-
-> keepcache=1
+[^修改]: keepcache=1
 
 <!--开启缓存后，用yum install安装的软件包会在/var/cache/yum中保存-->
 
-http://jingyan.baidu.com/album/d2b1d102b8b0825c7f37d46b.html?picindex=11)
+[参考]: http://jingyan.baidu.com/album/d2b1d102b8b0825c7f37d46b.html?picindex=11
+
+
 
 # 4 免密钥登录
 
@@ -262,7 +254,9 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
   watch progress -c httpd
   ```
 
-[]: 官网：https://github.com/Xfennec/progress
+[官网地址]: https://github.com/Xfennec/progress
+
+
 
 # 6 根据内容查找文件
 
@@ -276,7 +270,7 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 
 ## 7.1 安装Python3
 
-- 新建文件夹
+- 创建安装目录
 
   ```
   mkdir -p /opt/python/ && cd /opt/python/
@@ -284,18 +278,18 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 
 - 从官网下载最新稳定版python安装包（略过）
 
-  []: 官网地址：https://www.python.org/downloads/
+  [官网地址]: https://www.python.org/downloads/
 
 - 解压，进入目录
 
   ```
-  tar -xvf Python-3.6.2.tar.xz && cd Python-3.6.2
+  tar -xvf Python-3.6.2.tar.xz
   ```
 
 - 安装python依赖
 
 - ```
-  yum  install -y openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc
+  yum install -y openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc
   ```
 
 - cd Python-3.6.2
@@ -332,38 +326,24 @@ progress-master是一款监控后台进程的工具。非常有助于实时监�
 vi /usr/bin/yum
 ```
 
-[^/usr/bin/python2.7]: 
-
-​       
+[^修改第一行]: /usr/bin/python2.7
 
 ```
  vi /usr/libexec/urlgrabber-ext-down
 ```
 
-[^/usr/bin/python2.7]: 
+[^修改第一行]: /usr/bin/python2.7
 
-6、 测试
+## 7.4 测试
 
-​       [root@vps8 download]# python
+```
+python 
+```
 
-​       Python 3.6.2 (default, Mar  9 2018, 20:59:55)
+[^返回结果示例]: Python 3.6.2 (default, Mar  9 2018, 20:59:55)
 
 ​       [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)] on linux
 
 ​       Type "help", "copyright", "credits" or "license" for more information.
 
 ​       \>>>
-
- 
-
-7、安装pip
-
-​       下载地址：https://pypi.org/project/pip/#files
-
-​       pip install  --no-index --find-links=/opt/kubespray/python-require/ pip-19.2.3.tar.gz
-
-8、重置yum
-
-​       设置yum所需的python
-
-​       
