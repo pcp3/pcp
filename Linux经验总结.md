@@ -306,11 +306,13 @@ vi /usr/bin/yum
 
 > 第一行改为：/usr/bin/python2.7
 
+
 ```
  vi /usr/libexec/urlgrabber-ext-down
 ```
 
 > 第一行改为：/usr/bin/python2.7
+
 
 ## 7.4 测试
 
