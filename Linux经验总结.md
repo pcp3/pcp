@@ -1,6 +1,6 @@
  
 
-<center>**Linux常用操作**</center>
+**Linux常用操作**
 
 
 # 1 硬盘分区及格式化
@@ -155,7 +155,7 @@
 	vi /etc/yum.repos.d/CentOS7-Base-163.repo
 ```
 
-[CentOS7-Base-163.repo下载地址](http://mirrors.163.com/.help/CentOS7-Base-163.repo)
+   [*CentOS7-Base-163.repo下载地址*](http://mirrors.163.com/.help/CentOS7-Base-163.repo)
 
 ## 3.3 设置Yum缓存
 
